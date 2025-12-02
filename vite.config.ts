@@ -1,24 +1,17 @@
-import { defineConfig } from 'vite';
-import fs from 'fs';
-
-// Lit les dépendances de ton package.json
-const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
-const externalModules = Object.keys(pkg.dependencies || {}).concat([
-  'events', 'fs', 'path' // Ajoute les modules Node.js de base
-]);
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   build: {
-    lib: {
-      entry: 'server/index.ts',
-      fileName: 'server.js',
-      formats: ['es'],
-    },
-    outDir: 'dist',
-    emptyOutDir: true,
-    // ESSENTIEL : Exclure toutes les dépendances
     rollupOptions: {
-      external: externalModules,
-    },
+      // Empêche Rollup d'essayer de charger fsevents (module macOS)
+      external: ['fsevents', 'node:fs', 'node:fs/promises']
+    }
   },
-});
+  resolve: {
+    alias: {
+      // Évite que le bundle essaye d'inclure des modules Node côté navigateur
+      fs: 'empty:',
+      path: 'empty:'
+    }
+  }
+})
