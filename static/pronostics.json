@@ -1,1 +1,86 @@
-
+{
+  "cote_sure": 319.3,
+  "sure_combined": [
+    {
+      "match": "Paris Saint-Germain vs Olympique Marseille",
+      "league": "Ligue 1 (France)",
+      "pronostic": "1X2 - Domicile",
+      "cote": 2.1
+    },
+    {
+      "match": "Manchester City vs Liverpool",
+      "league": "Premier League (England)",
+      "pronostic": "1X2 - Domicile",
+      "cote": 2.49
+    },
+    {
+      "match": "Real Madrid vs Barcelona",
+      "league": "La Liga (Spain)",
+      "pronostic": "1X2 - Domicile",
+      "cote": 1.71
+    },
+    {
+      "match": "Bayern Munich vs Borussia Dortmund",
+      "league": "Bundesliga (Germany)",
+      "pronostic": "1X2 - Domicile",
+      "cote": 1.72
+    },
+    {
+      "match": "Juventus vs Inter Milan",
+      "league": "Serie A (Italy)",
+      "pronostic": "1X2 - Domicile",
+      "cote": 2.39
+    },
+    {
+      "match": "Arsenal vs Chelsea",
+      "league": "Premier League (England)",
+      "pronostic": "1X2 - Domicile",
+      "cote": 2.82
+    },
+    {
+      "match": "Atletico Madrid vs Sevilla",
+      "league": "La Liga (Spain)",
+      "pronostic": "1X2 - Domicile",
+      "cote": 2.04
+    },
+    {
+      "match": "Lyon vs Monaco",
+      "league": "Ligue 1 (France)",
+      "pronostic": "1X2 - Domicile",
+      "cote": 1.51
+    }
+  ],
+  "cote_risky": 259.02,
+  "risky_combined": [
+    {
+      "match": "Paris Saint-Germain vs Olympique Marseille",
+      "league": "Ligue 1 (France)",
+      "pronostic": "1X2 - Extérieur",
+      "cote": 3.2
+    },
+    {
+      "match": "Manchester City vs Liverpool",
+      "league": "Premier League (England)",
+      "pronostic": "1X2 - Extérieur",
+      "cote": 2.45
+    },
+    {
+      "match": "Real Madrid vs Barcelona",
+      "league": "La Liga (Spain)",
+      "pronostic": "1X2 - Extérieur",
+      "cote": 2.77
+    },
+    {
+      "match": "Bayern Munich vs Borussia Dortmund",
+      "league": "Bundesliga (Germany)",
+      "pronostic": "1X2 - Extérieur",
+      "cote": 3.09
+    },
+    {
+      "match": "Juventus vs Inter Milan",
+      "league": "Serie A (Italy)",
+      "pronostic": "1X2 - Extérieur",
+      "cote": 3.86
+    }
+  ]
+}
