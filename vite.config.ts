@@ -1,20 +1,24 @@
 import { defineConfig } from 'vite';
+import fs from 'fs';
+
+// Lit les dépendances de ton package.json
+const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
+const externalModules = Object.keys(pkg.dependencies || {}).concat([
+  'events', 'fs', 'path' // Ajoute les modules Node.js de base
+]);
 
 export default defineConfig({
   build: {
-    // Cette configuration est essentielle. Elle dit à Vite de construire une librairie,
-    // ce qui est parfait pour une API headless (sans interface HTML).
     lib: {
-      entry: 'server/index.ts', // Pointez vers ton fichier de démarrage corrigé.
-      fileName: 'server.js', // Le nom du fichier de sortie compilé.
+      entry: 'server/index.ts',
+      fileName: 'server.js',
       formats: ['es'],
     },
-    // Le code compilé ira dans le dossier 'dist'
     outDir: 'dist',
     emptyOutDir: true,
-    // Cette ligne résout l'erreur "isevents" et les autres modules internes.
+    // ESSENTIEL : Exclure toutes les dépendances
     rollupOptions: {
-      external: ['events', 'fs', 'path'],
+      external: externalModules,
     },
   },
 });
